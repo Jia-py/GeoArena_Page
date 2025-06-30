@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoArena by AML Lab CityU HK</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* 防止滚动条 */
+        }
+        iframe#gradioIframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // var gradioURL = "https://2ca8d636ac977e0871.gradio.live/?__theme=light"; // Your variable URL
+            var gradioURL = "https://4babe7d9060de8c60a.gradio.live"; // Your variable URL
+            var iframe = document.getElementById("gradioIframe");
+            var link = document.getElementById("gradioLink");
+            if (iframe) iframe.src = gradioURL;
+            if (link) link.href = gradioURL;
+        });
+    </script>
+</head>
+<body>
+    <iframe id="gradioIframe" width="100%" height="100%" style="border:none;">
+      Your browser does not support iframes. Please click this <a id="gradioLink">url</a>. 
+    </iframe>
+</body>
+</html>
